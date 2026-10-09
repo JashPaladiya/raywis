@@ -1,6 +1,6 @@
-# This repository tracks the built site only. The Vite project that produces
-# it is not committed - run `npm run build` and commit the result in dist/.
-# For GitHub Pages: Settings > Pages > Deploy from a branch > main /dist
+# This repository publishes the built site at its root. The Vite project that
+# produces it lives alongside but is intentionally not tracked: run
+# `npm run publish` (build + lift into the root) and commit the result.
 
 node_modules
 .vite
@@ -10,11 +10,15 @@ node_modules
 /src
 /public
 /tools
-/index.html
+/app.html
 /package.json
 /package-lock.json
 /vite.config.js
 /.oxlintrc.json
+/README.md
+
+# dist is only the intermediate output - the root holds the published copy
+/dist
 
 # Logs
 logs
@@ -23,7 +27,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
 # Editor directories and files
 .vscode/*
