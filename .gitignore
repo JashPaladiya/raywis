@@ -1,24 +1,16 @@
-# This repository publishes the built site at its root. The Vite project that
-# produces it lives alongside but is intentionally not tracked: run
-# `npm run publish` (build + lift into the root) and commit the result.
+# The published site at the repository root is tracked normally.
+#
+# The Vite project that produces it is deliberately NOT tracked. Those
+# exclusions live in .git/info/exclude instead of here, because oxlint reads
+# .gitignore and would otherwise refuse to lint the source at all.
+
+# build output that is only an intermediate step - the root holds the
+# published copy
+/dist
 
 node_modules
 .vite
 *.local
-
-# source and build config are intentionally untracked
-/src
-/public
-/tools
-/app.html
-/package.json
-/package-lock.json
-/vite.config.js
-/.oxlintrc.json
-/README.md
-
-# dist is only the intermediate output - the root holds the published copy
-/dist
 
 # Logs
 logs
